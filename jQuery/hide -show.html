@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script src="./JQurey.js"></script>
+    <script>
+        $(function() {
+            var nume = true;
+            $("input").click(function() {
+                if (nume) {
+
+                    $("div").hide(5000, function() {
+
+                        nume = false;
+                    })
+                } else {
+
+                    $("div").show(5000, function() {
+                        alert("动画执行完毕");
+                        nume = true;
+                    });
+
+
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="隐藏/显示">
+    <div>
+        hahahahh1
+    </div>
+</body>
+
+</html>

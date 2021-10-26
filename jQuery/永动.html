@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            position: relative;
+        }
+    </style>
+    <script src="./JQurey.js"></script>
+    <script>
+        $(function() {
+            let nume = function() {
+                $("div").animate({
+                    left: "200px"
+                }, 2000).animate({
+                    top: "200px"
+                }, 2000).animate({
+                    left: "-=200px"
+                }, 2000).animate({
+                    top: "-=200px"
+                }, 2000, function() {
+                    nume();
+                });
+
+            }
+            $("input").click(function() {
+                nume();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="开始">
+    <div>
+        hahah1
+    </div>
+</body>
+
+</html>

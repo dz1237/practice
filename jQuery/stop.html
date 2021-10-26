@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            position: relative;
+        }
+    </style>
+    <script src="./JQurey.js"></script>
+    <script>
+        $(function() {
+            $("input").click(function() {
+                $("div").animate({
+                        left: "500px"
+                    }, 2000).animate({
+                        top: "500px"
+                    }, 2000)
+                    .animate({
+                        left: "-=500px"
+                    }, 2000)
+                    .animate({
+                        top: "-=500px"
+                    }, 2000);
+
+            });
+            $("input:eq(1)").click(function() {
+                $("div").stop(true, true);
+
+            })
+            $("input:eq(2)").click(function() {
+                $("div").stop(false, true);
+            })
+            $("input:eq(3)").click(function() {
+                $("div").stop(true, false);
+            })
+            $("input:eq(4)").click(function() {
+                $("div").stop(false, false);
+            })
+
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="移动">
+    <input type="button" value="stop">
+    <input type="button" value="stop">
+    <input type="button" value="stop">
+    <input type="button" value="stop">
+    <div></div>
+</body>
+
+</html>
