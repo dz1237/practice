@@ -1,0 +1,67 @@
+html {
+    font-size: 38px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    width: 6.4rem;
+    height: 1rem;
+    font-size: 0.4rem;
+    background: -webkit-linear-gradient(top, rgba(200, 200, 200, 1) 0%, rgba(233, 233, 2331, 1)50%, rgba(200, 200, 200, 1) 100%);
+    line-height: 1rem;
+    text-align: center;
+}
+
+#banner {
+    width: 6.4rem;
+    height: 2.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+#banner>#contents {
+    width: 32rem;
+    height: 2.75rem;
+    position: absolute;
+}
+
+#banner>#contents img {
+    width: 6.4rem;
+    height: 2.75rem;
+    display: block;
+    float: left;
+}
+
+.content {
+    width: 6.4rem;
+    height: 9rem;
+    background: url(../img/indexbg.jpg) center top;
+    background-size: 6.4rem auto;
+}
+
+.content>section {
+    width: 5.4rem;
+    height: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0.2rem 0.5rem;
+}
+
+.content>section>p {
+    float: left;
+    width: 2.4rem;
+    font-size: 0.2rem;
+    height: 1.4rem;
+    margin: 0.24rem 0.12rem;
+}
+
+.content>section img {
+    width: 2.4rem;
+    height: 1.4rem;
+    /* border: solid 0.2rem rgba(233, 233, 233, 1); */
+    margin: 0.24rem 0.12rem;
+    float: right;
+}
