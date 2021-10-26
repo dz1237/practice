@@ -8,21 +8,22 @@
     <title>Document</title>
     <style>
         div {
-            font-size: 0.3733333rem;
-        }
-        
-        img {
-            width: 5rem;
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
         }
     </style>
-    <script src="./js/flexible.js"></script>
 </head>
 
 <body>
-    <div>
-        测试哈哈哈哈哈
+    <div id="div1">
+        touchend
     </div>
-    <img src="./img/car.jpg" alt="">
+    <script>
+        document.getElementById("div1").addEventListener("touchend", function() {
+            alert("触发了touchend事件");
+        })
+    </script>
 </body>
 
 </html>

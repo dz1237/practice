@@ -8,21 +8,24 @@
     <title>Document</title>
     <style>
         div {
-            font-size: 0.3733333rem;
-        }
-        
-        img {
-            width: 5rem;
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
         }
     </style>
-    <script src="./js/flexible.js"></script>
+
 </head>
 
 <body>
-    <div>
-        测试哈哈哈哈哈
+    <div id="div1">
+        touchmove
     </div>
-    <img src="./img/car.jpg" alt="">
+    <script>
+        document.getElementById("div1").addEventListener("touchmove", function() {
+            console.log("触发了touchmove事件");
+
+        })
+    </script>
 </body>
 
 </html>
