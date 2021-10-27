@@ -1,0 +1,8 @@
+.triangel_app {
+  border-width: 20px;
+  border-color: transparent transparent transparent #090;
+  border-style: dashed dashed dashed solid;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

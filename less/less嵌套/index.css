@@ -1,0 +1,26 @@
+#navgation ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 500px;
+}
+
+#navgation ul li {
+    background-color: #090;
+    border-bottom: 1px solid #f00;
+}
+
+#navgation ul li a {
+    background-color: #ff0;
+    text-decoration: none;
+}
+
+#navgation ul li a:hover {
+    background-color: #009;
+    color: #fff;
+}
+
+#navgation ul li span {
+    background-color: #ff0;
+    float: right;
+}
