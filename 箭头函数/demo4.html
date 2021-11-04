@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // ES5
+        var nume = function(id, name, age) {
+            return {
+                id: id,
+                name: name,
+                age: age
+            }
+        }
+        console.log(nume("1001", "tom", "男"));
+        // ES6
+        var nana = (id, name, age) => ({
+            id: id,
+            name: name,
+            age: age
+        })
+        console.log(nana("1001", "jarry", "男"));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
