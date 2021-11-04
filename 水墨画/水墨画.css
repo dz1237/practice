@@ -1,0 +1,157 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    color: #293331;
+}
+
+#header a,
+#topMenu a,
+.blogItem h2 a,
+.blogMeta a {
+    text-decoration: none;
+}
+
+body {
+    background: url(./images/background.jpg);
+    color: #293331;
+    font: 13px Georgia, "Times New Roman", Times, serif;
+    text-align: center;
+}
+
+#container {
+    background: url(./images/spill.gif) no-repeat top right;
+    margin: 0px auto;
+    text-align: left;
+    width: 780px;
+}
+
+#header {
+    background: url(./images/header.gif) no-repeat;
+    height: 109px;
+    padding: 0px 10px 0px 20px;
+}
+
+#header a {
+    font-size: 48px;
+    font-weight: normal;
+    padding: 20px 0px 0px 170px;
+}
+
+#header h2 {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: right;
+}
+
+#topMenu {
+    background: url(./images/menubar.gif) no-repeat;
+    height: 48px;
+}
+
+#topMenu ul {
+    font-size: 24px;
+    line-height: 1em;
+    list-style-type: none;
+    padding: 14px 30px 0px 0px;
+    text-align: right;
+}
+
+#topMenu li {
+    display: inline;
+}
+
+#sidebar {
+    float: right;
+    padding: 20px 30px 10px 0px;
+    text-align: right;
+    width: 150px;
+}
+
+#sidebar h3 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#sidebar ul {
+    line-height: 1.8em;
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+#sidebar ul a {
+    text-decoration: none;
+}
+
+#mainContent {
+    background: url(./images/body.gif) repeat-y;
+    padding: 20px 250px 10px 40px;
+}
+
+.blogTtem {
+    padding-bottom: 20px;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+
+.blogItem h2,
+.blogItem h3 {
+    font-weight: normal;
+}
+
+.blogItem h2 {
+    font-size: 24px;
+}
+
+#header a,
+#topMenu a,
+.blogItem h2 a,
+.blogMeta a {
+    text-decoration: none;
+}
+
+.blogItem h3 {
+    background: url(images/hr.gif) bottom left no-repeat;
+    font-size: 14px;
+    padding-bottom: 6px;
+}
+
+p {
+    line-height: 1.5em;
+    padding: 5px 0;
+}
+
+ul,
+ol {
+    margin-left: 20px;
+    line-height: 1.6em;
+}
+
+blockquote {
+    background: url(images/body.gif) top left repeat-y;
+    font-size: 14px;
+    font-style: italic;
+    padding: 5px 0 5px 30px;
+}
+
+#comments {
+    margin: 20px 0 0 20px;
+}
+
+#footer {
+    background: url(images/bottom.gif) no-repeat;
+    font-size: 12px;
+    height: 70 px;
+    padding: 0 10 px 0 20 px;
+}
+
+#footer p {
+    padding: 30 px 0 0 0;
+    text-align: center;
+}
