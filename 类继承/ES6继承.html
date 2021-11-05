@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建一个父类
+        class Person {
+            constructor(name, age, sex) {
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+            }
+            eat() {
+                alert("我是帅嘎");
+            }
+        }
+        let aa = new Person("赵四", 45, "男");
+        //创建子类Studnet  继承父类上的方法属性
+        class Student extends Person { //继承父类上的方法
+            constructor(name, age, sex, sno, sdept) {
+                super(name, age, sex);
+                this.sno = sno;
+                this.sdept = sdept;
+            }
+            study() {
+                alert("好好学习，天天向上");
+            }
+        }
+        let qqq = new Student("大脚", 45, "女", "10001", "象牙山");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

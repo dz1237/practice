@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建一个父类
+        class Person {
+            constructor(name, age, sex) {
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+            }
+            eat() {
+                alert("哈哈哈");
+            }
+        }
+        const a = new Person("常规", 56, "男");
+        //创建子类   然后继承父类属性方法
+        class Cunmin extends Person {
+            constructor(name, age, sex, sno, sdept) {
+                super(name, age, sex);
+                this.sno = sno;
+                this.sdept = sdept;
+            }
+            zhongdi() {
+                alert("大丰收");
+
+            }
+        }
+        let cm = new Cunmin("刘能", 55, "男", "45", "象牙塔扇");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

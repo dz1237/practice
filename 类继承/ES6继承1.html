@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建父类
+        class Person {
+            constructor(name, age, sex) { //添加属性
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+            }
+            eat() { //方法
+                alert("吃出健康来");
+
+            }
+        }
+        let P1 = new Person("tom", 20, "男");
+        //创建子类Student
+        class Student extends Person { //继承父类上的方法
+            constructor(name, age, sex, sno, sdept) {
+                //子类构造器后面第一条命令必须是super
+                super(name, age, sex); //继承父类上的属性
+                this.sno = sno;
+                this.sdept = sdept;
+            }
+            study() {
+                alert("持之以恒");
+            }
+        }
+        let a1 = new Student("jarray", 25, "女", "10001", "电信系");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

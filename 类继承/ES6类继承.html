@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // ES6
+        //创建一个父类
+        class Person {
+            constructor(name, age, sex) { //构造器函数
+                    this.name = name; //添加属性
+                    this.age = age;
+                    this.sex = sex;
+                }
+                //在类中方法省略function
+            eat() {
+                alert("吃出健康来");
+            }
+        }
+        // 实例化一个Person对象
+        let p1 = new Person("TOM", 19, "男");
+        console.log("p1", p1);
+
+        //子类   Student   继承父类Person的属性和方法
+        class Student extends Person { //extneds继承原型上的方法   Student  以后叫组件
+            constructor(name, age, sex, sno, sdept) {
+                //子类构造器函数第一条命令必须是调用super   如果后调用  有同名的属性就会覆盖子类的同名属性
+                super(name, age, sex); //继承父类的属性  相当于Person.call(name,age,sex);
+                this.sno = sno;
+                this.sdept = sdept;
+            }
+            study() {
+                alert("持之以恒");
+            }
+        }
+        var a1 = new Student("jarray", 20, "女", "10005", "甲酸剂");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //人类
+        function Person(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+        }
+        Person.prototype.eat = function() {
+                alert("吃出健康来");
+            }
+            //学生类
+        function Student(name, age, sex, sno, sdept) {
+            //继承父类的属性
+            Person.call(this, name, age, sex);
+            this.sno = sno;
+            this.sdept = sdept;
+        }
+        //继承方法
+        for (var key in Person.prototype) {
+            Student.prototype[key] = Person.prototype[key]; //原型拷贝
+        }
+        //Student添加方法
+        Student.prototype.study = function() {
+                alert("持之以恒");
+            }
+            //实例化一个Syudent对象
+        var s1 = new Student("tom", 19, "男", "10001", "电信系");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
