@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+        }
+    </style>
+    <script src="./JQurey.js"></script>
+    <script src="./mock-min.js"></script>
+    <script src="./data.js"></script>
+    <script>
+        $(function() {
+            $("input").click(function() {
+                $.ajax({
+                    url: "data.php",
+                    type: "GET",
+                    dataType: "json",
+                    success: function(data) {
+                        var str = "<ul>";
+                        for (var i = 0; i < data.data.length; i++) {
+                            str += "<li> 编号" + data.data[i].id +
+                                "<li> 姓名" + data.data[i].name +
+                                "<li> 性别" + data.data[i].sex +
+                                "<li> 城市" + data.data[i].city + "</li>" + "<br>";
+                        }
+                        $("div").html(str + "</ul>");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body><input type="button" value="点击">
+    <div></div>
+</body>
+
+</html>

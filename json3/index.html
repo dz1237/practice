@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JQurey.js"></script>
+    <script src="./mock-min.js"></script>
+    <script src="./data.js"></script>
+    <script>
+        $(function() {
+            $("#bt1").click(function() {
+                $.ajax({
+                    url: "check.php",
+                    type: "POST",
+                    data: JSON.stringify({
+                        userName: $("#userName").val(),
+                        pwd: $("#pwd").val()
+                    }),
+                    contentType: "applocation/json",
+                    dataType: "json",
+                    success: function(data) {
+                        if (data.status == "10001") {
+                            location.href = "manage.php";
+                        } else {
+                            $("div").html(data.msg);
+
+                        }
+                    }
+                })
+            });
+        });
+    </script>
+</head>
+
+<body>
+    用户名：<input type="text" name="" id="userName"><br> 密码：
+    <input type="password" name="" id="pwd"><br>
+    <div>
+
+    </div>
+    <input type="button" value="登录" id="bt1">
+</body>
+
+</html>
