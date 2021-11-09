@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环引用，内存泄漏</title>
+    <script>
+        function nume() {
+            let f = {};
+            let g = {};
+            f.prop = g;
+            g.prop = f; //因为f和g相互引用，计数永远不是能是0
+        }
+        //手动清除
+        f.prop = null;
+        g.prop = null;
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

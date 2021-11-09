@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = ["a", "b", "c"];
+        let nume = arr[Symbol.iterator]();
+        nume.next(); //{value:'a',done:false}
+        nume.next(); //{value:'a',done:false}
+        nume.next(); //{value:'a',done:false}
+        nume.next(); //{value:undefined,done:true}
+        //next返回的是  value值   和 done 循环是否结束  true结束   fasle没结束
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
