@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./echarts.min.js"></script>
+    <script>
+        window.onload = function() {
+            var chartDom = document.getElementById('main');
+            var myChart = echarts.init(chartDom);
+            var option;
+            option = {
+                legend: {
+                    top: 'bottom'
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        mark: {
+                            show: true
+                        },
+                        dataView: {
+                            show: true,
+                            readOnly: false
+                        },
+                        restore: {
+                            show: true
+                        },
+                        saveAsImage: {
+                            show: true
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Nightingale Chart',
+                    type: 'pie',
+                    radius: [50, 250],
+                    center: ['50%', '50%'],
+                    roseType: 'area',
+                    itemStyle: {
+                        borderRadius: 8
+                    },
+                    data: [{
+                        value: 40,
+                        name: 'rose 1'
+                    }, {
+                        value: 38,
+                        name: 'rose 2'
+                    }, {
+                        value: 32,
+                        name: 'rose 3'
+                    }, {
+                        value: 30,
+                        name: 'rose 4'
+                    }, {
+                        value: 28,
+                        name: 'rose 5'
+                    }, {
+                        value: 26,
+                        name: 'rose 6'
+                    }, {
+                        value: 22,
+                        name: 'rose 7'
+                    }, {
+                        value: 18,
+                        name: 'rose 8'
+                    }]
+                }]
+            };
+
+            option && myChart.setOption(option);
+        }
+    </script>
+</head>
+
+<body style="height: 100%; margin: 0">
+    <div id="main" style="height: 100%"></div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>累加</title>
+    <script>
+        let a = 0;
+        let add = (...arg) => {
+            for (let i in arg) {
+                a += arg[i];
+            }
+            alert(a);
+        }
+        add(1.5, 9);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

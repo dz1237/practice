@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generator函数</title>
+    <script>
+        function* nume() {
+            yield "tom";
+            yield "susan";
+            return "perte";
+        }
+        let nana = nume();
+        console.log(nana.next());
+        console.log(nana.next());
+        console.log(nana.next());
+        //done为true情况：遇到return    或者是函数调用完毕
+
+        function* asd() {
+            yield "zhaosi1";
+            yield "liuneng1";
+            yield "changgui1";
+        }
+        let qwe = asd();
+        console.log(qwe.next());
+        console.log(qwe.next());
+        console.log(qwe.next());
+        console.log(qwe.next());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

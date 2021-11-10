@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nume {
+            width: 700px;
+            height: 500px;
+            border: 1px solid #f00;
+            background-color: aliceblue;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            let nume = document.getElementById("nume");
+            let nana = nume.getContext("2d");
+            //开始画图
+            //房顶
+            nana.lineWidth = 1; //线宽
+            nana.strokeStyle = "#000000"; //描边颜色
+            nana.fillStyle = "#fb233a"; //填充颜色
+            nana.beginPath();
+            nana.moveTo(200, 30);
+            nana.lineTo(250, 70);
+            nana.lineTo(150, 70);
+            nana.lineTo(200, 30);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //房顶上的窗户
+            nana.lineWidth = 1;
+            nana.strokeStyle = "#111111";
+            nana.fillStyle = "#aadff1";
+            nana.beginPath();
+            nana.moveTo(185, 50);
+            nana.lineTo(215, 50);
+            nana.lineTo(215, 65);
+            nana.lineTo(185, 65);
+            nana.lineTo(185, 50);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //房顶窗户上的竖线
+            nana.lineWidth = 1;
+            nana.strokeStyle = "#111111";
+            nana.beginPath();
+            nana.moveTo(200, 50);
+            nana.lineTo(200, 65);
+            nana.stroke();
+            nana.closePath();
+            //窗户上的横线
+            nana.lineWidth = 1;
+            nana.strokeStyle = "#111111";
+            nana.beginPath();
+            nana.moveTo(185, 57.5);
+            nana.lineTo(215, 57.5);
+            nana.stroke();
+            nana.closePath();
+            //房顶上的烟囱
+            nana.lineWidth = 1;
+            nana.strokeStyle = "#111111";
+            nana.fillStyle = "#ceac90";
+            nana.beginPath();
+            nana.moveTo(215, 41);
+            nana.lineTo(215, 25);
+            nana.lineTo(225, 25);
+            nana.lineTo(225, 49);
+            nana.lineTo(215, 41);
+            nana.stroke();
+            nana.fill();
+            nana.closePath();
+            //烟囱突出
+            nana.lineWidth = 1;
+            nana.strokeStyle = "#111111";
+            nana.fillStyle = "#80514a";
+            nana.beginPath();
+            nana.moveTo(215, 25);
+            nana.lineTo(210, 25);
+            nana.lineTo(210, 22);
+            nana.lineTo(230, 22);
+            nana.lineTo(230, 25);
+            nana.lineTo(225, 25);
+            nana.stroke();
+            nana.fill();
+            nana.closePath();
+            //烟囱出的烟
+            nana.beginPath();
+            nana.ellipse(224, 17, 6, 3, 0, 0, Math.PI * 2); //(起点x.起点y,半径x,半径y,旋转的角度，起始角，结果角，顺时针还是逆时针)
+            nana.fillStyle = "#fff";
+            nana.lineWidth = 0;
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            nana.beginPath();
+            nana.ellipse(231, 7, 9, 4, 0, 0, Math.PI * 2);
+            nana.fillStyle = "#ffffff";
+            nana.lineWidth = 0;
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //下面主体
+            nana.fillStyle = "#fbc6d3";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(160, 70);
+            nana.lineTo(160, 120);
+            nana.lineTo(240, 120);
+            nana.lineTo(240, 70);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //主体窗户
+            nana.fillStyle = "#fafbb6";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(210, 90);
+            nana.lineTo(210, 100);
+            nana.lineTo(230, 100);
+            nana.lineTo(230, 90);
+            nana.ellipse(220, 90, 10, 12, 0, 0, Math.PI, 1); //半圆
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //主题上的门
+            nana.fillStyle = "#f72035";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(170, 119);
+            nana.lineTo(170, 89);
+            nana.lineTo(195, 89);
+            nana.lineTo(195, 119);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //门上的把手
+            nana.beginPath();
+            nana.ellipse(175, 104, 1, 2, 0, 0, Math.PI * 2);
+            nana.fillStyle = "#fff";
+            nana.lineWidth = 0;
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //侧边小房子
+            //侧边小房子主体
+            nana.fillStyle = "#f02c62";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(160, 120);
+            nana.lineTo(110, 120);
+            nana.lineTo(110, 90);
+            nana.lineTo(160, 90);
+            nana.lineTo(160, 120);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //侧边小房子房顶
+            nana.fillStyle = "#1374c6";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(110, 90);
+            nana.lineTo(100, 90);
+            nana.lineTo(110, 80);
+            nana.lineTo(160, 80);
+            nana.lineTo(160, 90);
+            nana.lineTo(110, 90);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //小房子烟囱
+            nana.fillStyle = "#f4a1b5";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(120, 80);
+            nana.lineTo(120, 65);
+            nana.lineTo(130, 65);
+            nana.lineTo(130, 80);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //小房子烟囱突出
+            nana.lineWidth = 1;
+            nana.strokeStyle = "#111111";
+            nana.fillStyle = "#de3265";
+            nana.beginPath();
+            nana.moveTo(120, 65);
+            nana.lineTo(115, 65);
+            nana.lineTo(115, 63);
+            nana.lineTo(135, 63);
+            nana.lineTo(135, 65);
+            nana.lineTo(130, 65);
+            nana.stroke();
+            nana.fill();
+            nana.closePath();
+            //侧边小房子主体窗户
+            nana.fillStyle = "#fafbb6";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(145, 105);
+            nana.lineTo(125, 105);
+            nana.lineTo(125, 95);
+            nana.lineTo(145, 95);
+            nana.lineTo(145, 105);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //侧边小房子主体窗户上的线
+
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(135, 95);
+            nana.lineTo(135, 105);
+            nana.stroke();
+            nana.closePath();
+            //马路
+            nana.fillStyle = "#000000";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(110, 120);
+            nana.lineTo(0, 120);
+            nana.lineTo(0, 200);
+            nana.lineTo(300, 200);
+            nana.lineTo(300, 120);
+
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //马路上的线
+            nana.fillStyle = "#ffffff";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(20, 137.5);
+            nana.lineTo(50, 137.5);
+            nana.lineTo(50, 132.5);
+            nana.lineTo(20, 132.5);
+            nana.lineTo(20, 137.5);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+
+            nana.fillStyle = "#ffffff";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(100, 137.5);
+            nana.lineTo(130, 137.5);
+            nana.lineTo(130, 132.5);
+            nana.lineTo(100, 132.5);
+            nana.lineTo(100, 137.5);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+
+            nana.fillStyle = "#ffffff";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(180, 137.5);
+            nana.lineTo(210, 137.5);
+            nana.lineTo(210, 132.5);
+            nana.lineTo(180, 132.5);
+            nana.lineTo(180, 137.5);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+
+
+            nana.fillStyle = "#ffffff";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(260, 137.5);
+            nana.lineTo(290, 137.5);
+            nana.lineTo(290, 132.5);
+            nana.lineTo(260, 132.5);
+            nana.lineTo(260, 137.5);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //树干
+            nana.fillStyle = "#80514a";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(50, 120);
+            nana.lineTo(50, 100);
+            nana.lineTo(60, 100);
+            nana.lineTo(60, 120);
+            nana.lineTo(50, 120);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+            //树杈    树杈顶点x=55 
+            nana.fillStyle = "#3b9a05";
+            nana.strokeStyle = "#000000";
+            nana.lineWidth = 1;
+            nana.beginPath();
+            nana.moveTo(50, 105);
+            nana.lineTo(30, 105);
+            nana.lineTo(45, 95);
+            nana.lineTo(34, 95);
+            nana.lineTo(55, 80);
+            nana.lineTo(76, 95);
+            nana.lineTo(65, 95);
+            nana.lineTo(80, 105);
+            nana.lineTo(60, 105);
+            nana.fill();
+            nana.stroke();
+            nana.closePath();
+
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="nume">
+        您的浏览器不支持canvas
+    </canvas>
+
+</body>
+
+</html>
