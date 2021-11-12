@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建map
+        let nume = new Map([
+                ["name", "tom"],
+                ["age", 19],
+                ["sex", "男"]
+            ])
+            //遍历map
+        let obj = {};
+        for (let [key, value] of nume) {
+            obj[key] = value;
+        }
+        let json1 = JSON.stringify(obj);
+        document.write(json1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
