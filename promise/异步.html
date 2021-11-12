@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./ajax.js"></script>
+    <script>
+        window.onload = function() {
+            let bt1 = document.getElementById("bt1");
+            // bt1.onclick = function() {
+            //     ajax({ //pending
+            //             url: "https://randomuser.me/api",
+            //             type: "GET",
+            //             dataType: "json"
+            //         })
+            //         .then(data => { //fulfilled resolve
+            //             console.log("data", data);
+            //         })
+            //         .catch(error => { //rejected
+            //             console.dir(error)
+            //         })
+            // }
+            bt1.onclick = function() {
+                ajax({
+                        url: "https://randomuser.me/api",
+                        type: "GET",
+                        dataType: "json"
+                    })
+                    .then(data => {
+                        console.log("data", data);
+                    })
+                    .catch(error => { //rejected
+                        console.dir(error)
+                    })
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" id="bt1" value="点击获取数据">
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Nume1() {
+            var p = new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    console.log("执行完成1");
+                    resolve("数据....");
+                }, 2000);
+            });
+            return p;
+        }
+
+        function Nume2() {
+            var a = new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    console.log("执行完成2");
+                    resolve("数据...");
+                }, 2000);
+            });
+            return a;
+        }
+
+        function Nume3() {
+            var z = new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    console.log("执行完成2");
+                    resolve("数据...");
+                }, 2000);
+            });
+            return z;
+        }
+        Nume1().then(function(data) {
+                console.log("数据是：" + data);
+                return Nume2;
+            })
+            .then(function(data) {
+                console.log("数据是：" + data);
+                return Nume3;
+            })
+            .then(function(data) {
+                console.log("数据是：" + data);
+
+            })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
