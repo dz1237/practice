@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person {
+            constructor(name, age, sex) {
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+            }
+            eat() {
+                alert("彳亍健康来");
+            }
+        }
+        let p1 = new Person("tom", 19, "男");
+        console.log(p1);
+        class Student extends Person {
+            constructor(name, age, sex, sno, sdept) {
+                super(name, age, sex);
+                this.sno = sno;
+                this.sdept = sdept;
+            }
+            study() {
+                alert("持之以恒");
+            }
+        }
+        let a1 = new Student("jarray", 20, "男", "10001", "电信");
+        console.log(a1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

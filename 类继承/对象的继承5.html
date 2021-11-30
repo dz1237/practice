@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let nume = {
+            name: "tom",
+            age: 19,
+            sex: "男",
+            eat() {
+                alert("彳亍将康来");
+            }
+        }
+        let nana = {
+            __proto__: nume,
+            sno: "10001",
+            sdept: "电信",
+            study() {
+                alert("持之以恒")
+            }
+        }
+        console.log(nana);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
